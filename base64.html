@@ -1,0 +1,33 @@
+<head>
+    <title>counting up in different bases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+    body {
+        background-color: rgb(29, 29, 29) !important;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: 400;
+        color: white;
+        font-size: 6em;
+        text-align: center;
+        padding: 32px;
+    }
+</style>
+
+<div id="block">
+    <p class="counter" id="base2">0</p>
+    <p class="counter" id="base10">0</p>
+    <p class="counter" id="base12">0</p>
+    <p class="counter" id="base36">0</p>
+</div>
+
+<script>
+    var num = 0;
+    setInterval(() => {
+        num = num + 1;
+        base2.innerHTML = num.toString(2);
+        base10.innerHTML = num.toLocaleString();
+        base12.innerHTML = num.toString(12);
+        base36.innerHTML = num.toString(36);
+    }, 1);
+</script>
